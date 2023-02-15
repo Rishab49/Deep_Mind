@@ -13,7 +13,7 @@ export default function useFetchRoutines(): string[] {
 
     //@ts-ignore
     console.log(import.meta.env["VITE_API_ENDPOINT"]);
-    fetch(import.meta.env["VITE_API_ENDPOINT"], {
+    fetch(import.meta.env["VITE_API_ENDPOINT"],{
       method: "POST",
       body: JSON.stringify(tasks),
       headers: {
