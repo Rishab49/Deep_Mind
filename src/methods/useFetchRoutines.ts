@@ -11,7 +11,7 @@ export default function useFetchRoutines():string[] {
     let entries = url.entries();
     let tasks = paramsToObject(entries);
     
-    fetch("http://localhost:3000/", {
+    fetch(process.env.API_ENDPOINT, {
       method: "POST",
       body: JSON.stringify(tasks),
       headers: {
